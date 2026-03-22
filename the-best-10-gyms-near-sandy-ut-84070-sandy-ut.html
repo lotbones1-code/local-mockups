@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Gyms in Sandy, UT | Premium Fitness Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #B71C1C 0%, #D32F2F 100%);
+            color: white;
+            padding: 100px 20px 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #B71C1C;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            background-color: #FFEBEE;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background-color: #FFEBEE;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #B71C1C;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(183, 28, 28, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(183, 28, 28, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: #B71C1C;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #EF5350, #B71C1C);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            color: #B71C1C;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background-color: #FFEBEE;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(183, 28, 28, 0.08);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: #EF5350;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #B71C1C;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .phone-number {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #B71C1C;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        .phone-number a {
+            color: #B71C1C;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .phone-number a:hover {
+            color: #EF5350;
+        }
+
+        .contact-form {
+            background: #FFEBEE;
+            padding: 50px 40px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #B71C1C;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #EF5350;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #B71C1C;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #B71C1C, #D32F2F);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(183, 28, 28, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #B71C1C;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+
+            .contact-form {
+                padding: 35px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+            }
+
+            .services,
+            .why-choose,
+            .testimonials,
+            .contact {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Best Gyms in Sandy, UT</h1>
+            <p>Transform your body and mind at Sandy's premier fitness destination</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💪</div>
+                    <h3>Strength Training</h3>
+                    <p>State-of-the-art equipment and expert coaching to help you build muscle and increase strength safely and effectively.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏃</div>
+                    <h3>Group Classes</h3>
+                    <p>High-energy group fitness classes including yoga, spin, HIIT, and more. All fitness levels welcome.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Personal Training</h3>
+                    <p>One-on-one coaching tailored to your goals. Get personalized workout plans and nutrition guidance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧘</div>
+                    <h3>Wellness Programs</h3>
+                    <p>Comprehensive wellness solutions including nutrition counseling, recovery services, and lifestyle coaching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Certified Trainers</h3>
+                    <p>Our team consists of nationally certified fitness professionals with years of experience helping clients achieve their goals.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📍</div>
+                    <h3>Local to Sandy</h3>
+                    <p>Proudly serving the Sandy, UT community for over 10 years. We're your neighbors, invested in your success.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>Premium Facilities</h3>
+                    <p>Clean, modern equipment and amenities. We maintain the highest standards for your comfort and safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Members Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">This gym completely changed my life. The trainers are amazing and the community is so supportive. I've lost 40 pounds and gained so much confidence. Best decision I ever made!</p>
+                    <p class="testimonial-author">— Sarah M., Sandy UT</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">I've been to many gyms over the years, but this one stands out. The equipment is top-notch, the facility is always clean, and the staff genuinely cares about your progress. Highly recommend!</p>
+                    <p class="testimonial-author">— Mike R., Sandy UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="phone-number">
+                    <a href="tel:">Call Us Today</a>
+                </div>
+                <form class="contact-form" action="mailto:" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3>Best Gyms in Sandy, UT</h3>
+            <p>Serving Sandy, UT and surrounding areas</p>
+            <p>&copy; 2026 Best Gyms in Sandy. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
