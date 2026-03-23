@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beehive Plumbing - Expert Plumbing Services in Sandy UT</title>
+    <title>Beehive Plumbing - Expert Plumbing Services in Sandy, UT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -35,26 +35,8 @@
         .hero {
             background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
             color: white;
-            padding: 80px 20px 100px;
+            padding: 120px 20px 100px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
         }
 
         .hero h1 {
@@ -64,51 +46,31 @@
             line-height: 1.2;
         }
 
-        .hero .tagline {
+        .hero p {
             font-size: 1.3rem;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
             opacity: 0.95;
-            font-weight: 400;
-        }
-
-        .hero .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            margin-bottom: 35px;
-            backdrop-filter: blur(10px);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
             background: white;
             color: #1565C0;
-            padding: 18px 50px;
+            padding: 18px 45px;
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-button.secondary:hover {
-            background: white;
-            color: #1565C0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
         /* Section Styles */
@@ -125,35 +87,25 @@
         }
 
         /* Services Section */
-        .services {
-            background: white;
-        }
-
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .service-card {
-            background: #F5F9FF;
+            background: white;
             padding: 35px;
             border-radius: 12px;
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: #42A5F5;
             box-shadow: 0 8px 25px rgba(21, 101, 192, 0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
         }
 
         .service-card h3 {
@@ -163,49 +115,44 @@
         }
 
         .service-card p {
-            color: #666;
-            line-height: 1.7;
+            color: #555;
+            font-size: 1rem;
         }
 
         /* Why Choose Us */
-        .why-choose-us {
-            background: #F5F9FF;
-        }
-
-        .features-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            margin-top: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .feature {
+        .benefit {
             text-align: center;
         }
 
-        .feature-icon {
+        .benefit-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
-            color: white;
+            background: linear-gradient(135deg, #42A5F5, #1565C0);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
             margin: 0 auto 20px;
-            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+            font-size: 2.5rem;
         }
 
-        .feature h3 {
+        .benefit h3 {
             font-size: 1.4rem;
             color: #1565C0;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .feature p {
-            color: #666;
-            line-height: 1.7;
+        .benefit p {
+            color: #555;
+            font-size: 1rem;
         }
 
         /* Testimonials */
@@ -215,48 +162,31 @@
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .testimonial-card {
+        .testimonial {
             background: #F5F9FF;
             padding: 35px;
             border-radius: 12px;
             border-left: 4px solid #42A5F5;
-            position: relative;
         }
 
-        .testimonial-card::before {
-            content: '"';
-            font-size: 4rem;
-            color: #42A5F5;
-            opacity: 0.3;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-family: Georgia, serif;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #555;
+        .testimonial p {
+            font-size: 1.05rem;
+            color: #444;
             margin-bottom: 20px;
             line-height: 1.7;
-            position: relative;
-            z-index: 1;
+            font-style: italic;
         }
 
         .testimonial-author {
             font-weight: 600;
             color: #1565C0;
-        }
-
-        .stars {
-            color: #FFC107;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-style: normal;
         }
 
         /* Contact Section */
@@ -279,50 +209,45 @@
             margin-bottom: 50px;
         }
 
-        .contact-info-item {
-            margin: 25px 0;
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
 
-        .contact-info-item a {
+        .contact-info a {
             color: white;
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 600;
-            transition: opacity 0.3s ease;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            transition: opacity 0.3s;
         }
 
-        .contact-info-item a:hover {
+        .contact-info a:hover {
             opacity: 0.8;
         }
 
-        .contact-info-item .label {
-            font-size: 0.9rem;
+        .contact-info p {
+            font-size: 1.1rem;
             opacity: 0.9;
-            display: block;
-            margin-bottom: 5px;
+            margin-top: 10px;
         }
 
         .contact-form {
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-form h3 {
-            color: #1565C0;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            color: #333;
+            color: #1565C0;
             font-weight: 600;
             margin-bottom: 8px;
         }
@@ -330,12 +255,12 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 14px;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
-            font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            font-family: inherit;
+            transition: border-color 0.3s;
         }
 
         .form-group input:focus,
@@ -350,56 +275,56 @@
         }
 
         .submit-button {
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            background: #1565C0;
             color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
+            padding: 16px 40px;
             font-size: 1.1rem;
             font-weight: 700;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
+            transition: all 0.3s ease;
             width: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .submit-button:hover {
+            background: #0d47a1;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
         }
 
         /* Footer */
         footer {
-            background: #1a1a1a;
+            background: #0d47a1;
             color: white;
-            padding: 40px 20px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         footer h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         footer p {
-            opacity: 0.8;
-            margin: 10px 0;
+            opacity: 0.9;
+            margin-bottom: 5px;
         }
 
-        .footer-note {
+        footer .mockup-note {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.9rem;
             opacity: 0.7;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
             }
 
-            .hero .tagline {
+            .hero p {
                 font-size: 1.1rem;
             }
 
@@ -407,36 +332,31 @@
                 font-size: 2rem;
             }
 
-            .cta-button {
-                padding: 15px 35px;
-                font-size: 1.1rem;
-                display: block;
-                margin: 10px auto;
-                max-width: 300px;
+            .contact-info a {
+                font-size: 1.4rem;
+            }
+
+            .contact-form {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 20px 60px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
             }
 
             section {
                 padding: 60px 20px;
             }
 
-            .contact-form {
-                padding: 30px 20px;
-            }
-
-            .services-grid,
-            .features-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero {
-                padding: 60px 20px 80px;
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -444,14 +364,10 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="container">
             <h1>Beehive Plumbing</h1>
-            <p class="tagline">Your Trusted Local Plumbers in Sandy, Utah</p>
-            <div class="badge">⚡ 24/7 Emergency Service Available</div>
-            <div>
-                <a href="tel:8016618155" class="cta-button">📞 Call (801) 661-8155</a>
-                <a href="#contact" class="cta-button secondary">Schedule Service</a>
-            </div>
+            <p>Your Trusted Local Plumbers in Sandy, Utah - Fast, Reliable Service You Can Count On</p>
+            <a href="tel:8016618155" class="cta-button">Call Now: (801) 661-8155</a>
         </div>
     </section>
 
@@ -461,48 +377,44 @@
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
                     <h3>Emergency Repairs</h3>
-                    <p>Fast response to burst pipes, water leaks, and urgent plumbing emergencies. We're available 24/7 to protect your home.</p>
+                    <p>Available 24/7 for urgent plumbing issues. Burst pipes, water leaks, and flooding - we respond fast to minimize damage and restore your peace of mind.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🚿</div>
                     <h3>Drain Cleaning</h3>
-                    <p>Professional drain and sewer cleaning services. Say goodbye to clogs, slow drains, and backups with our expert solutions.</p>
+                    <p>Professional drain clearing for kitchen sinks, bathroom drains, and main sewer lines. We use advanced equipment to remove stubborn clogs quickly and safely.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💧</div>
                     <h3>Water Heater Service</h3>
-                    <p>Installation, repair, and maintenance of traditional and tankless water heaters. Keep your hot water flowing reliably.</p>
+                    <p>Installation, repair, and maintenance for traditional and tankless water heaters. Keep your hot water flowing reliably year-round.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🛠️</div>
                     <h3>Fixture Installation</h3>
-                    <p>Expert installation of faucets, toilets, sinks, and garbage disposals. Quality work that lasts for years to come.</p>
+                    <p>Expert installation of faucets, toilets, sinks, and garbage disposals. Quality workmanship that stands the test of time.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
+    <section class="why-choose">
         <div class="container">
-            <h2 class="section-title">Why Sandy Residents Choose Us</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">✓</div>
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">✓</div>
                     <h3>Licensed & Insured</h3>
-                    <p>Fully licensed Utah plumbers with comprehensive insurance coverage. Your home and family are protected with every job.</p>
+                    <p>Fully licensed Utah plumbers with comprehensive insurance. Your home and family are protected with every service call.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Local & Trusted</h3>
-                    <p>We live and work right here in Sandy, UT. When you call us, you're supporting your neighbors and getting service from people who care.</p>
+                <div class="benefit">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Local Experts</h3>
+                    <p>Sandy residents serving Sandy homes. We know local codes, common issues, and respond faster because we're right here in your community.</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⭐</div>
+                <div class="benefit">
+                    <div class="benefit-icon">🛡️</div>
                     <h3>100% Satisfaction Guarantee</h3>
-                    <p>We stand behind our work with a complete satisfaction guarantee. If you're not happy, we'll make it right—no exceptions.</p>
+                    <p>We stand behind our work with a complete satisfaction guarantee. If you're not happy, we'll make it right - no exceptions.</p>
                 </div>
             </div>
         </div>
@@ -513,62 +425,48 @@
         <div class="container">
             <h2 class="section-title">What Our Customers Say</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Had a pipe burst at 2 AM and they were here within 30 minutes! Professional, fast, and saved us from a total disaster. Can't recommend them enough.</p>
-                    <p class="testimonial-author">— Jennifer M., Sandy</p>
+                <div class="testimonial">
+                    <p>"Had a pipe burst at 2am and they were at my house within 45 minutes. Professional, fast, and saved us from major water damage. Can't recommend them enough!"</p>
+                    <div class="testimonial-author">- Jennifer M., Sandy</div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Best plumber I've ever worked with. Fair pricing, showed up on time, and explained everything clearly. Finally found a plumber I can trust!</p>
-                    <p class="testimonial-author">— Robert T., Sandy</p>
+                <div class="testimonial">
+                    <p>"Called them for a water heater replacement. They gave me a fair quote, showed up on time, and finished the job in one day. Great experience from start to finish."</p>
+                    <div class="testimonial-author">- Robert T., Sandy</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-info-item">
-                        <span class="label">Call or Text</span>
-                        <a href="tel:8016618155">(801) 661-8155</a>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="label">Email</span>
-                        <a href="mailto:scheduling@beehiveplumbing.com">scheduling@beehiveplumbing.com</a>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="label">Service Area</span>
-                        <p style="font-size: 1.3rem; margin: 0;">Sandy, UT 84094 & Surrounding Areas</p>
-                    </div>
+                    <h3>Call Us Today</h3>
+                    <a href="tel:8016618155">(801) 661-8155</a>
+                    <p>Email: scheduling@beehiveplumbing.com</p>
+                    <p>Proudly Serving Sandy, UT 84094</p>
                 </div>
-
-                <div class="contact-form">
-                    <h3>Schedule Your Service</h3>
-                    <form action="mailto:scheduling@beehiveplumbing.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Describe Your Plumbing Issue</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
+                <form class="contact-form" action="mailto:scheduling@beehiveplumbing.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How Can We Help?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -577,10 +475,9 @@
     <footer>
         <div class="container">
             <h3>Beehive Plumbing</h3>
-            <p>Serving Sandy, UT 84094 & Surrounding Areas</p>
-            <p>Licensed • Insured • Locally Owned</p>
-            <p style="margin-top: 20px;">&copy; 2026 Beehive Plumbing. All rights reserved.</p>
-            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+            <p>Professional Plumbing Services in Sandy, UT 84094</p>
+            <p>&copy; 2026 Beehive Plumbing. All rights reserved.</p>
+            <p class="mockup-note">Website mockup by Shamil K - reply to claim this site</p>
         </div>
     </footer>
 </body>
