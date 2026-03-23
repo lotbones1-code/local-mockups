@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy Plumber Honest & Local Service | Mountain Man Plumbing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F9FF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #1565C0;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background: #1565C0;
+            color: white;
+            border: 2px solid #1565C0;
+        }
+        
+        .btn-secondary:hover {
+            background: #0d47a1;
+            border-color: #0d47a1;
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1565C0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(21, 101, 192, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(21, 101, 192, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1565C0;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .why-choose {
+            background: white;
+        }
+        
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .reason {
+            text-align: center;
+        }
+        
+        .reason-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+        
+        .reason h3 {
+            font-size: 1.4rem;
+            color: #1565C0;
+            margin-bottom: 15px;
+        }
+        
+        .reason p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .testimonials {
+            background: #F5F9FF;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(21, 101, 192, 0.08);
+            border-left: 4px solid #42A5F5;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1565C0;
+            font-style: normal;
+        }
+        
+        .contact {
+            background: white;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .phone {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1565C0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .phone:hover {
+            color: #42A5F5;
+        }
+        
+        .email {
+            font-size: 1.2rem;
+            color: #666;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .location {
+            font-size: 1.1rem;
+            color: #777;
+        }
+        
+        .contact-form {
+            background: #F5F9FF;
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #42A5F5;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #1565C0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: #1565C0;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .phone {
+                font-size: 2rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 20px 70px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Mountain Man Plumbing</h1>
+            <p>Sandy's trusted plumber for honest service, clear pricing, and reliable repairs. Your local plumbing experts since day one.</p>
+            <a href="tel:3857668935" class="btn">Call Now: (385) 766-8935</a>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Plumbing Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Emergency Repairs</h3>
+                    <p>Burst pipes, water heater failures, and urgent leaks. We respond fast to protect your Sandy home from water damage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Drain Cleaning</h3>
+                    <p>Stubborn clogs, slow drains, and sewer line issues. Professional equipment to clear your pipes quickly and safely.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fixture Installation</h3>
+                    <p>New faucets, toilets, sinks, and water heaters. Quality installation with attention to detail and clean workmanship.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Leak Detection & Repair</h3>
+                    <p>Hidden leaks, water pressure issues, and pipe damage. We find the source and fix it right the first time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Mountain Man Plumbing?</h2>
+            <div class="reasons-grid">
+                <div class="reason">
+                    <div class="reason-icon">✓</div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully licensed Utah plumber with comprehensive insurance. Your home is protected, and our work is guaranteed.</p>
+                </div>
+                <div class="reason">
+                    <div class="reason-icon">⭐</div>
+                    <h3>Local Sandy Experts</h3>
+                    <p>We know Sandy homes, Sandy water, and Sandy plumbing. Fast response times because we're right here in your community.</p>
+                </div>
+                <div class="reason">
+                    <div class="reason-icon">💰</div>
+                    <h3>Clear Pricing</h3>
+                    <p>No hidden fees or surprise charges. We explain the work, provide upfront pricing, and never upsell you on services you don't need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Tyler came out the same day our water heater broke. He was professional, explained everything clearly, and had us back up and running in no time. Highly recommend Mountain Man Plumbing!"</p>
+                    <p class="testimonial-author">— Sarah M., Sandy UT</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Honest service is hard to find these days. Tyler gave us options, didn't pressure us, and did excellent work at a fair price. We'll be calling him for all our plumbing needs."</p>
+                    <p class="testimonial-author">— James R., Sandy UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="tel:3857668935" class="phone">(385) 766-8935</a>
+                    <a href="mailto:tyler@mtnmanplumbing.com" class="email">tyler@mtnmanplumbing.com</a>
+                    <p class="location">Proudly serving Sandy, UT 84094 and surrounding areas</p>
+                </div>
+                
+                <form class="contact-form" action="mailto:tyler@mtnmanplumbing.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Mountain Man Plumbing</strong></p>
+            <p>Serving Sandy, UT 84094 with honest, reliable plumbing service</p>
+            <p>&copy; 2026 Mountain Man Plumbing. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
