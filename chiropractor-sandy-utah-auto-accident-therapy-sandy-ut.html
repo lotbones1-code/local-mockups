@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andersen Chiropractic | Sandy UT Auto Accident Therapy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2E7D32 0%, #388E3C 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #66BB6A;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background: #81C784;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: #E8F5E9;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2E7D32;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .service-card h3 {
+            color: #2E7D32;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .trust-icon {
+            width: 80px;
+            height: 80px;
+            background: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #2E7D32;
+        }
+        
+        .trust-item h3 {
+            color: #2E7D32;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .trust-item p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background: #E8F5E9;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #66BB6A;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            color: #2E7D32;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .phone-number {
+            font-size: 2.2rem;
+            color: #2E7D32;
+            font-weight: 700;
+            margin: 20px 0;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .phone-number:hover {
+            color: #66BB6A;
+        }
+        
+        .email-link {
+            font-size: 1.2rem;
+            color: #66BB6A;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        
+        .location {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        .contact-form {
+            background: #E8F5E9;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #2E7D32;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #66BB6A;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: #2E7D32;
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background: #388E3C;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2E7D32;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 20px;
+        }
+        
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .footer p {
+            opacity: 0.9;
+            margin: 5px 0;
+        }
+        
+        .footer-note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-grid,
+            .trust-signals,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phone-number {
+                font-size: 1.8rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Andersen Chiropractic</h1>
+            <p>Expert Auto Accident Therapy & Pain Relief in Sandy, Utah</p>
+            <a href="tel:8015725696" class="cta-button">Call Now: (801) 572-5696</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Auto Accident Therapy</h3>
+                    <p>Specialized treatment for whiplash, soft tissue injuries, and post-accident pain. We work with insurance to get you back on the road to recovery.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Back & Neck Pain Relief</h3>
+                    <p>Gentle spinal adjustments and therapeutic techniques to relieve chronic pain, improve mobility, and restore quality of life.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sports Injury Treatment</h3>
+                    <p>Get back in the game with targeted chiropractic care for athletic injuries, muscle strains, and performance optimization.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Wellness & Maintenance Care</h3>
+                    <p>Preventive adjustments and personalized wellness plans to keep your body aligned, healthy, and pain-free long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Andersen Chiropractic?</h2>
+            <div class="trust-signals">
+                <div class="trust-item">
+                    <div class="trust-icon">✓</div>
+                    <h3>Licensed & Experienced</h3>
+                    <p>Dr. Ken Andersen is a Utah-licensed chiropractor with over 15 years of experience treating auto accident injuries and chronic pain.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">★</div>
+                    <h3>Insurance Accepted</h3>
+                    <p>We work with most major insurance providers and handle all the paperwork for auto accident claims so you can focus on healing.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">♥</div>
+                    <h3>Local & Trusted</h3>
+                    <p>Proudly serving Sandy, Utah and surrounding communities. Your neighbors trust us — you can too.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">After my car accident, I was in constant pain. Dr. Andersen's treatment got me back to normal in just a few weeks. I can't thank him enough!</p>
+                    <p class="testimonial-author">— Sarah M., Sandy UT</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">I've struggled with lower back pain for years. Dr. Andersen's gentle approach and personalized care plan made all the difference. Highly recommend!</p>
+                    <p class="testimonial-author">— Mike R., Draper UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Schedule Your Appointment</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="tel:8015725696" class="phone-number">(801) 572-5696</a>
+                    <a href="mailto:info@drkenandersen.com" class="email-link">info@drkenandersen.com</a>
+                    <p class="location">Serving Sandy, Utah and surrounding areas</p>
+                </div>
+                
+                <form class="contact-form" action="mailto:info@drkenandersen.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How Can We Help?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Andersen Chiropractic</h3>
+                <p>Serving Sandy, Utah</p>
+                <p>&copy; 2026 Andersen Chiropractic. All rights reserved.</p>
+            </div>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
