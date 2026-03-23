@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Sewer & Drain Cleaning - Expert Plumber in Sandy, UT</title>
+    <title>Acme Sewer & Drain Cleaning | Expert Plumber in Sandy, UT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,10 +19,10 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #F5F9FF;
+            color: #333;
+            background: #F5F9FF;
         }
         
         .container {
@@ -31,101 +31,95 @@
             padding: 0 20px;
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+        header {
+            background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
             color: white;
-            padding: 100px 20px 80px;
+            padding: 100px 20px 120px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
         
-        .hero::before {
+        header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
         
-        .hero-content {
+        header .container {
             position: relative;
             z-index: 1;
         }
         
-        .hero h1 {
+        h1 {
             font-size: 3rem;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
         
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
             opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 400;
         }
         
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #1565C0;
-            padding: 18px 45px;
-            font-size: 1.2rem;
-            font-weight: 700;
+            background: #42A5F5;
+            color: white;
+            padding: 18px 48px;
+            font-size: 1.25rem;
+            font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+            background: #2196F3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5);
         }
         
-        /* Services Section */
-        .services {
+        section {
             padding: 80px 20px;
-            background: white;
         }
         
-        .section-title {
-            text-align: center;
+        h2 {
             font-size: 2.5rem;
-            font-weight: 700;
             color: #1565C0;
-            margin-bottom: 50px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            margin-bottom: 20px;
         }
         
         .service-card {
-            background: #F5F9FF;
-            padding: 35px;
+            background: white;
+            padding: 40px 30px;
             border-radius: 12px;
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            text-align: center;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: #42A5F5;
-            box-shadow: 0 8px 20px rgba(21, 101, 192, 0.15);
+            box-shadow: 0 8px 25px rgba(21, 101, 192, 0.15);
         }
         
         .service-icon {
@@ -134,28 +128,25 @@
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
             color: #1565C0;
+            font-size: 1.5rem;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .service-card p {
-            color: #555;
-            line-height: 1.7;
+            color: #666;
+            line-height: 1.8;
         }
         
-        /* Why Choose Us Section */
         .why-choose {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, white, #F5F9FF);
+            background: white;
         }
         
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         
         .feature {
@@ -166,72 +157,74 @@
         .feature-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            background: linear-gradient(135deg, #42A5F5, #1565C0);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 25px;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         
         .feature h3 {
-            font-size: 1.5rem;
             color: #1565C0;
+            font-size: 1.5rem;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .feature p {
-            color: #555;
-            line-height: 1.7;
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
-        /* Testimonials Section */
         .testimonials {
-            padding: 80px 20px;
-            background: white;
+            background: #F5F9FF;
         }
         
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
+            gap: 30px;
         }
         
         .testimonial {
-            background: #F5F9FF;
+            background: white;
             padding: 35px;
             border-radius: 12px;
-            border-left: 4px solid #42A5F5;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: relative;
         }
         
-        .testimonial-text {
-            font-style: italic;
-            color: #333;
-            margin-bottom: 20px;
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #42A5F5;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial p {
+            color: #555;
+            font-size: 1.1rem;
             line-height: 1.8;
-            font-size: 1.05rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
         
         .testimonial-author {
-            font-weight: 600;
             color: #1565C0;
-            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 1rem;
         }
         
-        .stars {
-            color: #FFC107;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        
-        /* Contact Section */
         .contact {
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, white, #F5F9FF);
+            background: white;
         }
         
         .contact-content {
@@ -240,49 +233,37 @@
         }
         
         .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.1);
+            margin-bottom: 50px;
         }
         
         .contact-info h3 {
             color: #1565C0;
             font-size: 1.8rem;
             margin-bottom: 25px;
+            font-weight: 600;
         }
         
         .contact-detail {
-            margin: 20px 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #333;
+            margin: 15px 0;
         }
         
         .contact-detail a {
-            color: #1565C0;
+            color: #42A5F5;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
         }
         
         .contact-detail a:hover {
-            color: #42A5F5;
+            color: #1565C0;
         }
         
         .contact-form {
-            background: white;
+            background: #F5F9FF;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.1);
-        }
-        
-        .contact-form h3 {
-            color: #1565C0;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            text-align: center;
         }
         
         .form-group {
@@ -293,17 +274,18 @@
             display: block;
             margin-bottom: 8px;
             color: #333;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 1rem;
         }
         
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 14px;
-            border: 2px solid #E0E0E0;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
             border-radius: 8px;
-            font-family: 'Inter', sans-serif;
             font-size: 1rem;
+            font-family: 'Inter', sans-serif;
             transition: border-color 0.3s ease;
         }
         
@@ -314,75 +296,65 @@
         }
         
         .form-group textarea {
+            min-height: 150px;
             resize: vertical;
-            min-height: 120px;
         }
         
         .submit-button {
-            width: 100%;
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            background: #1565C0;
             color: white;
-            padding: 16px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            padding: 16px 40px;
             border: none;
             border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            width: 100%;
         }
         
         .submit-button:hover {
+            background: #0D47A1;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.3);
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
         }
         
-        /* Footer */
-        .footer {
+        footer {
             background: #1565C0;
             color: white;
-            padding: 40px 20px;
+            padding: 40px 20px 20px;
             text-align: center;
         }
         
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .footer h3 {
-            font-size: 1.8rem;
+        footer h3 {
+            font-size: 1.5rem;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
-        .footer p {
+        footer p {
             margin: 10px 0;
             opacity: 0.9;
         }
         
-        .footer-divider {
-            height: 1px;
-            background: rgba(255,255,255,0.3);
-            margin: 30px auto;
-            max-width: 400px;
-        }
-        
         .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.9rem;
             opacity: 0.8;
-            margin-top: 10px;
         }
         
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            h1 {
                 font-size: 2.2rem;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            .tagline {
+                font-size: 1.2rem;
             }
             
-            .section-title {
+            h2 {
                 font-size: 2rem;
             }
             
@@ -392,154 +364,129 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-info,
+            section {
+                padding: 60px 20px;
+            }
+            
             .contact-form {
                 padding: 30px 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero {
-                padding: 60px 20px 50px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .cta-button {
-                padding: 15px 35px;
-                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Acme Sewer & Drain Cleaning</h1>
-            <p>Your Trusted Local Plumber in Sandy, UT — Fast Response, Expert Workmanship, Honest Pricing</p>
-            <a href="#contact" class="cta-button">Get a Free Quote</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
+    <header>
         <div class="container">
-            <h2 class="section-title">Our Plumbing Services</h2>
+            <h1>Acme Sewer & Drain Cleaning</h1>
+            <p class="tagline">Your Trusted Local Plumber in Sandy, UT</p>
+            <a href="#contact" class="cta-button">Call Now</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🚿</div>
-                    <h3>Drain Cleaning & Repair</h3>
-                    <p>Professional sewer and drain cleaning services. We clear clogs fast with state-of-the-art equipment and keep your drains flowing smoothly.</p>
+                    <div class="service-icon">🚰</div>
+                    <h3>Drain Cleaning</h3>
+                    <p>Fast, effective drain cleaning for kitchen sinks, bathroom drains, and main sewer lines. We clear tough clogs and restore flow quickly.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>Leak Detection & Repair</h3>
-                    <p>Quick leak detection and repair services for faucets, pipes, and water heaters. We stop leaks before they cause costly damage to your home.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚰</div>
-                    <h3>Water Heater Services</h3>
-                    <p>Installation, repair, and maintenance of traditional and tankless water heaters. Get hot water when you need it, every time.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
                     <h3>Emergency Plumbing</h3>
-                    <p>24/7 emergency plumbing services in Sandy and surrounding areas. When disaster strikes, we're here to help — day or night.</p>
+                    <p>24/7 emergency service for burst pipes, water heater failures, and urgent repairs. We're here when you need us most.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Leak Detection & Repair</h3>
+                    <p>Advanced leak detection technology to find hidden leaks and prevent water damage. Fast, reliable repairs to protect your home.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Water Heater Service</h3>
+                    <p>Installation, repair, and maintenance for all water heater types. Keep your hot water flowing year-round.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title">Why Choose Acme Plumbing?</h2>
+            <h2>Why Choose Acme?</h2>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">✓</div>
                     <h3>Licensed & Insured</h3>
-                    <p>Fully licensed, bonded, and insured for your peace of mind. We meet all Utah state requirements and stand behind our work.</p>
+                    <p>Fully licensed, bonded, and insured for your peace of mind. Professional service you can trust.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🏡</div>
-                    <h3>Locally Owned</h3>
-                    <p>Family-owned and operated right here in Sandy. We're your neighbors, and we care about our community and our reputation.</p>
+                    <div class="feature-icon">📍</div>
+                    <h3>Local & Reliable</h3>
+                    <p>Family-owned and operated right here in Sandy, UT. We're your neighbors, and we care about our community.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">⭐</div>
-                    <h3>20+ Years Experience</h3>
-                    <p>Over two decades of expert plumbing service in Sandy and the Wasatch Front. No job is too big or too small for our skilled team.</p>
+                    <h3>Expert Workmanship</h3>
+                    <p>Years of experience with honest pricing and quality work. No hidden fees, just professional plumbing solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
+            <h2>What Our Customers Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Had a burst pipe emergency on a Sunday morning. Acme answered immediately and had someone at my house within 45 minutes. Professional, fast, and fair pricing. Highly recommend!"</p>
-                    <p class="testimonial-author">— Jennifer M., Sandy</p>
+                    <p>Had a major drain backup on a Sunday evening. Acme came out within an hour and had everything fixed in no time. Professional, courteous, and reasonably priced. Highly recommend!</p>
+                    <div class="testimonial-author">— Jennifer M., Sandy</div>
                 </div>
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Best plumber I've ever worked with. They replaced my old water heater and cleaned out my main sewer line. The crew was respectful, cleaned up everything, and explained all my options clearly."</p>
-                    <p class="testimonial-author">— Robert T., Sandy</p>
+                    <p>We've used Acme for several plumbing projects over the years. They always show up on time, do quality work, and clean up after themselves. It's refreshing to work with honest contractors.</p>
+                    <div class="testimonial-author">— Robert T., Sandy</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2>Contact Us Today</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p class="contact-detail">📧 <a href="mailto:info@acmesewerdraincleaning.com">info@acmesewerdraincleaning.com</a></p>
-                    <p class="contact-detail">📍 Proudly Serving Sandy, UT 84094 & Surrounding Areas</p>
+                    <h3>Get In Touch</h3>
+                    <p class="contact-detail"><a href="mailto:info@acmesewerdraincleaning.com">info@acmesewerdraincleaning.com</a></p>
+                    <p class="contact-detail">Proudly serving Sandy, UT 84094 and surrounding areas</p>
                 </div>
-                
-                <div class="contact-form">
-                    <h3>Request a Quote</h3>
-                    <form action="mailto:info@acmesewerdraincleaning.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tell Us About Your Plumbing Needs</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
+                <form class="contact-form" action="mailto:info@acmesewerdraincleaning.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
+    <footer>
+        <div class="container">
             <h3>Acme Sewer & Drain Cleaning</h3>
-            <p>Your Trusted Plumber in Sandy, UT 84094</p>
+            <p>Expert Plumbing Services in Sandy, UT 84094</p>
             <p>&copy; 2026 Acme Sewer & Drain Cleaning. All rights reserved.</p>
-            <div class="footer-divider"></div>
             <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
         </div>
     </footer>
