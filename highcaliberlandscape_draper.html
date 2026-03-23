@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Caliber Landscape - Premium Landscaping Services in Draper, UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #F1F8E9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(135deg, #33691E 0%, #558B2F 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,40 Q300,80 600,40 T1200,40 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.05)"/></svg>') bottom center no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        #hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        #hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #8BC34A;
+            color: #1B5E20;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background: #9CCC65;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #33691E;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        #services {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #F1F8E9;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #8BC34A;
+            box-shadow: 0 8px 25px rgba(51, 105, 30, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #33691E;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #546E7A;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us Section */
+        #why-choose-us {
+            background: #F1F8E9;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #33691E;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature p {
+            color: #546E7A;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: #F1F8E9;
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 4px solid #8BC34A;
+            position: relative;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: #37474F;
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #33691E;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-location {
+            color: #78909C;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-info h3 {
+            color: #33691E;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #37474F;
+        }
+
+        .contact-item a {
+            color: #33691E;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #558B2F;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #33691E;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8BC34A;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #33691E;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #558B2F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(51, 105, 30, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #33691E;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 30px 25px;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero {
+                padding: 80px 20px 60px;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>High Caliber Landscape</h1>
+            <p class="tagline">Transforming Draper Yards into Beautiful Outdoor Spaces Since 2006</p>
+            <a href="tel:8014556789" class="cta-button">Call Now: (801) 455-6789</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Landscape Design & Installation</h3>
+                    <p>Custom landscape designs tailored to Draper's unique climate. From xeriscaping to lush gardens, we create outdoor spaces that reflect your vision.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏊</div>
+                    <h3>Pool Design & Installation</h3>
+                    <p>Complete pool services including design, installation, and integration with your existing landscape. Turn your backyard into a private resort.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Landscape Maintenance</h3>
+                    <p>Year-round maintenance to keep your property looking pristine. Lawn care, pruning, seasonal cleanups, and irrigation management.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Sprinkler & Irrigation Systems</h3>
+                    <p>Smart irrigation solutions designed for Utah's dry climate. Water-efficient systems that keep your landscape healthy while reducing costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <div class="container">
+            <h2>Why Choose High Caliber Landscape</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>18+ Years Experience</h3>
+                    <p>Nearly two decades serving Draper and surrounding communities. Our expertise ensures quality craftsmanship on every project.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully licensed, bonded, and insured for your peace of mind. We stand behind our work with comprehensive warranties.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Local Draper Experts</h3>
+                    <p>Based right here in Draper, we understand Utah's unique soil, climate, and HOA requirements. Supporting local businesses you can trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"High Caliber completely transformed our backyard! The pool installation was seamless, and their team was professional from start to finish. We couldn't be happier with the results."</p>
+                    <p class="testimonial-author">Jennifer M.</p>
+                    <p class="testimonial-location">Draper, UT</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"After struggling with our lawn for years, High Caliber installed a new irrigation system and redesigned our landscaping. Now we have the best-looking yard on the street. Highly recommend!"</p>
+                    <p class="testimonial-author">David R.</p>
+                    <p class="testimonial-location">South Jordan, UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Get Your Free Estimate Today</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            📞 <a href="tel:8014556789">(801) 455-6789</a>
+                        </div>
+                        <div class="contact-item">
+                            ✉️ <a href="mailto:info@highcaliberlandscaping.com">info@highcaliberlandscaping.com</a>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: #546E7A; font-size: 1.05rem;">Serving Draper, South Jordan, Sandy & Surrounding Areas</p>
+                </div>
+
+                <form class="contact-form" action="mailto:info@highcaliberlandscaping.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your project</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>High Caliber Landscape</h3>
+            <p>12086 S Draper Ridge Dr, Draper UT 84020</p>
+            <p>Serving Draper and the Greater Salt Lake Valley</p>
+            <p style="margin-top: 15px;">&copy; 2026 High Caliber Landscape. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Fence Utah - Professional Fencing Installation & Repair in Sandy UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #EFEBE9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4E342E 0%, #6D4C41 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.03)"/></svg>') repeat;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #8D6E63;
+            color: white;
+            padding: 18px 48px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background: #A1887F;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #4E342E;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: #EFEBE9;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(78, 52, 46, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #4E342E;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            padding: 80px 20px;
+            background: #EFEBE9;
+        }
+
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .trust-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .trust-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .trust-card h3 {
+            color: #4E342E;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .trust-card p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: #EFEBE9;
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #8D6E63;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #4E342E;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-location {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #4E342E 0%, #6D4C41 100%);
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-item-icon {
+            font-size: 2rem;
+            color: #8D6E63;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #A1887F;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: #8D6E63;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #A1887F;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #3E2723;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-business {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .footer-location {
+            color: #A1887F;
+            margin-bottom: 15px;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #8D6E63;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 1.1rem;
+            }
+
+            .services-grid,
+            .trust-signals,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Diamond Fence Utah</h1>
+            <p class="tagline">Premium Fencing Solutions for Sandy & Surrounding Areas</p>
+            <a href="tel:8017479470" class="cta-button">Call Now: (801) 747-9470</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🪵</div>
+                    <h3>Wood Fencing</h3>
+                    <p>Beautiful cedar and redwood fences that add natural charm and privacy to your property. Custom designs available.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Vinyl Fencing</h3>
+                    <p>Low-maintenance, durable vinyl fences in multiple colors and styles. Perfect for Utah's climate.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⛓️</div>
+                    <h3>Chain Link Fencing</h3>
+                    <p>Affordable and secure chain link fencing for residential and commercial properties. Built to last.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚪</div>
+                    <h3>Custom Gates</h3>
+                    <p>Hand-crafted gates designed to match your fence perfectly. Manual and automatic options available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Diamond Fence Utah?</h2>
+            <div class="trust-signals">
+                <div class="trust-card">
+                    <div class="trust-icon">✅</div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully licensed contractors with comprehensive insurance coverage. Your project is in safe hands.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🏡</div>
+                    <h3>Locally Owned</h3>
+                    <p>Proud Sandy, Utah business serving our community since 2010. We know the area and care about quality.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Over 1,500 fences installed across the Salt Lake Valley. Expert craftsmanship on every project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Diamond Fence did an amazing job on our backyard privacy fence. The crew was professional, finished on time, and the quality is outstanding. Highly recommend!</p>
+                    <p class="testimonial-author">Sarah Martinez</p>
+                    <p class="testimonial-location">Sandy, UT</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">We needed a custom gate for our driveway and they delivered exactly what we wanted. Great communication throughout the project and fair pricing. Will definitely use them again.</p>
+                    <p class="testimonial-author">Mike Thompson</p>
+                    <p class="testimonial-location">Draper, UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📞</span>
+                        <div>
+                            <strong>Call Us:</strong><br>
+                            <a href="tel:8017479470">(801) 747-9470</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">✉️</span>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:office@diamondfenceutah.com">office@diamondfenceutah.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📍</span>
+                        <div>
+                            <strong>Visit Us:</strong><br>
+                            8741 Harrison St<br>
+                            Sandy, UT 84070
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">🗺️</span>
+                        <div>
+                            <strong>Service Area:</strong><br>
+                            Sandy, Draper, South Jordan,<br>
+                            West Jordan & Surrounding Areas
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:office@diamondfenceutah.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your fencing project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-business">Diamond Fence Utah</div>
+                <div class="footer-location">Proudly Serving Sandy, UT & Surrounding Areas</div>
+                <div class="copyright">&copy; 2026 Diamond Fence Utah. All rights reserved.</div>
+            </div>
+            <div class="footer-note">
+                Website mockup by Shamil K — reply to claim this site
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
