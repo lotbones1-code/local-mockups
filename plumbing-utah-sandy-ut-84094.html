@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Utah - Expert Plumbing Services in Sandy, UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F9FF;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1565C0;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1565C0;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(21, 101, 192, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565C0;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .why-choose {
+            background: white;
+        }
+
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .trust-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .trust-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #1565C0;
+            font-weight: 700;
+        }
+
+        .trust-item p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonials-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #42A5F5;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #1565C0;
+            font-size: 1.1rem;
+        }
+
+        .contact-section {
+            background: white;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 50px;
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1565C0;
+            margin: 20px 0;
+            text-decoration: none;
+            display: block;
+        }
+
+        .phone-number:hover {
+            color: #42A5F5;
+        }
+
+        .email-link {
+            font-size: 1.2rem;
+            color: #42A5F5;
+            text-decoration: none;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .service-area {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        .contact-form {
+            background: #F5F9FF;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #42A5F5;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: #1565C0;
+            color: white;
+            padding: 16px 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #42A5F5;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #1565C0;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        footer p {
+            margin: 8px 0;
+            opacity: 0.9;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .phone-number {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Plumbing Utah</h1>
+            <p>Sandy's Trusted Plumbing Experts - Fast, Reliable Solutions When You Need Them Most</p>
+            <a href="tel:8016011298" class="cta-button">Call Now: (801) 601-1298</a>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Emergency Plumbing</h3>
+                    <p>Fast response to burst pipes, major leaks, and plumbing emergencies. Available 24/7 to protect your home from water damage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Drain Cleaning</h3>
+                    <p>Professional drain cleaning and clog removal using advanced equipment. We clear kitchen sinks, bathroom drains, and main lines quickly.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Water Heater Services</h3>
+                    <p>Expert installation, repair, and maintenance for all water heater types. Tank and tankless systems - we keep your hot water flowing.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Leak Detection & Repair</h3>
+                    <p>Advanced leak detection technology finds hidden water and gas leaks fast. We fix them right the first time to prevent costly damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Plumbing Utah?</h2>
+            <div class="trust-signals">
+                <div class="trust-item">
+                    <div class="trust-icon">✓</div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully licensed plumbers with comprehensive insurance. Your home and family are protected with every service call.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>We understand plumbing emergencies can't wait. Same-day service available throughout Sandy and surrounding areas.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🏠</div>
+                    <h3>Local Experts</h3>
+                    <p>Proudly serving Sandy, UT for years. We know local plumbing codes and common issues in Utah homes inside and out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Had a burst pipe at 2 AM and they were here within an hour. Professional, efficient, and saved us from major water damage. Can't recommend them enough!"</p>
+                    <p class="testimonial-author">— Jennifer Martinez, Sandy</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Our water heater stopped working on the coldest day of winter. They came out same day, explained all our options, and had us back up and running by evening. Great service!"</p>
+                    <p class="testimonial-author">— Mike Thompson, Sandy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="tel:8016011298" class="phone-number">(801) 601-1298</a>
+                    <a href="mailto:info@plumbingutah.com" class="email-link">info@plumbingutah.com</a>
+                    <p class="service-area">Proudly serving Sandy, UT 84094 and surrounding areas</p>
+                </div>
+
+                <div class="contact-form">
+                    <form action="mailto:info@plumbingutah.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How Can We Help?</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Plumbing Utah</h3>
+            <p>Professional Plumbing Services in Sandy, UT 84094</p>
+            <p>&copy; 2026 Plumbing Utah. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
