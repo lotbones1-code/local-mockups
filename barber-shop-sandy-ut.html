@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootleggedBarberCo — Expert Cuts & Shaves in Sandy UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #263238;
+            background-color: #ECEFF1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #263238;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #263238 0%, #37474F 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(84, 110, 122, 0.3) 0%, transparent 60%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #ECEFF1;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #546E7A;
+            color: white;
+            padding: 18px 48px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(84, 110, 122, 0.4);
+        }
+        
+        .cta-button:hover {
+            background-color: #455A64;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(84, 110, 122, 0.5);
+        }
+        
+        .services {
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #ECEFF1;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(38, 50, 56, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #263238;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #546E7A;
+            line-height: 1.8;
+        }
+        
+        .why-choose {
+            background-color: #ECEFF1;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .benefit {
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #546E7A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+        
+        .benefit h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #263238;
+        }
+        
+        .benefit p {
+            color: #546E7A;
+            line-height: 1.8;
+        }
+        
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: #ECEFF1;
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #546E7A;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #263238;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #546E7A;
+        }
+        
+        .contact {
+            background-color: #263238;
+            color: white;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+        
+        .contact-info a {
+            color: #ECEFF1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #546E7A;
+        }
+        
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #546E7A;
+            margin: 20px 0;
+        }
+        
+        .contact-form {
+            background-color: #37474F;
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #ECEFF1;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background-color: #ECEFF1;
+            color: #263238;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background-color: #546E7A;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background-color: #455A64;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: #ECEFF1;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #999;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .services-grid,
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>BootleggedBarberCo</h1>
+                <p class="hero-tagline">Expert Cuts, Classic Shaves, Modern Style</p>
+                <a href="tel:+18018352091" class="cta-button">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Precision Skin Fades</h3>
+                    <p>Master-level skin fades and tapers that blend seamlessly. From low to high fades, we deliver sharp, clean lines every time.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💈</div>
+                    <h3>Traditional Cuts</h3>
+                    <p>Classic barbering techniques meet modern style. Whether you want a timeless look or contemporary edge, we've got you covered.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Hot Towel Shaves</h3>
+                    <p>Experience the luxury of a traditional hot towel shave. Relax while we deliver a close, smooth shave you can't get at home.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Beard Grooming</h3>
+                    <p>Keep your beard looking sharp with professional trimming, shaping, and conditioning treatments tailored to your style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose" id="about">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Licensed Professionals</h3>
+                    <p>All our barbers are fully licensed and trained in the latest techniques, ensuring you get expert service every visit.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Locally Owned</h3>
+                    <p>Proud to serve the Sandy community. We're your neighbors, committed to making you look and feel your best.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Years of Experience</h3>
+                    <p>Our team brings decades of combined experience. From classic cuts to modern styles, we've mastered the craft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">Best fade I've ever gotten. The attention to detail is incredible, and the atmosphere is super chill. I drive from Draper just to come here.</p>
+                    <p class="testimonial-author">— Marcus T., Sandy UT</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">Finally found a barber who knows what they're doing. Consistent quality every time, and the hot towel shave is worth every penny. Highly recommend!</p>
+                    <p class="testimonial-author">— David R., South Jordan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>📍 49 W 10600 S, Sandy, UT 84070</p>
+                    <p class="phone-number"><a href="tel:+18018352091">(801) 835-2091</a></p>
+                    <p>✉️ <a href="mailto:info@bootleggedbarberco.com">info@bootleggedbarberco.com</a></p>
+                </div>
+                
+                <form class="contact-form" action="mailto:info@bootleggedbarberco.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>BootleggedBarberCo</strong></p>
+            <p>Serving Sandy, UT and surrounding areas</p>
+            <p>&copy; 2026 BootleggedBarberCo. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
