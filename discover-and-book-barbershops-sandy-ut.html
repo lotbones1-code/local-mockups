@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover and Book Barbershops | Sandy UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #263238;
+            line-height: 1.6;
+            background: #ECEFF1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #263238 0%, #37474F 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #B0BEC5;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #546E7A;
+            color: white;
+            padding: 18px 48px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(84, 110, 122, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #607D8B;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(84, 110, 122, 0.4);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #263238;
+        }
+        
+        /* Services Section */
+        .services {
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: #ECEFF1;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(38, 50, 56, 0.1);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #263238;
+        }
+        
+        .service-card p {
+            color: #546E7A;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        .service-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #546E7A;
+            margin-top: 15px;
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose {
+            background: #ECEFF1;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #546E7A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #263238;
+        }
+        
+        .feature p {
+            color: #546E7A;
+            font-size: 1rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: #ECEFF1;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #546E7A;
+        }
+        
+        .testimonial p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #263238;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #546E7A;
+            font-style: normal;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #ECEFF1;
+        }
+        
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(38, 50, 56, 0.08);
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            color: #546E7A;
+        }
+        
+        .contact-info a {
+            color: #546E7A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #263238;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #263238;
+            margin: 20px 0;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #263238;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 15px;
+            border: 2px solid #ECEFF1;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #546E7A;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: #546E7A;
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background: #607D8B;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #263238;
+            color: white;
+            padding: 40px 20px 30px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            color: #B0BEC5;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .mockup-credit {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #37474F;
+            font-size: 0.9rem;
+            color: #78909C;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .contact-content {
+                padding: 30px 20px;
+            }
+            
+            .services-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Sandy's Top-Rated Barbershops</h1>
+            <p>Find the best barbers nearby. Explore styles, compare pricing, and book online instantly.</p>
+            <a href="#contact" class="cta-button">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Classic Haircut</h3>
+                    <p>Traditional barbering techniques with modern styling. Includes consultation, cut, and finish.</p>
+                    <div class="service-price">$30 - $45</div>
+                </div>
+                <div class="service-card">
+                    <h3>Beard Trim & Shape</h3>
+                    <p>Professional beard grooming with hot towel treatment and premium products.</p>
+                    <div class="service-price">$25 - $35</div>
+                </div>
+                <div class="service-card">
+                    <h3>Fade & Taper</h3>
+                    <p>Precision fades and tapers customized to your style. Clean, sharp results every time.</p>
+                    <div class="service-price">$35 - $50</div>
+                </div>
+                <div class="service-card">
+                    <h3>Full Service</h3>
+                    <p>Haircut, beard trim, hot towel shave, and styling. The complete grooming experience.</p>
+                    <div class="service-price">$65 - $85</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Barbers</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✂️</div>
+                    <h3>Licensed Professionals</h3>
+                    <p>All our barbershops feature state-licensed barbers with years of experience in traditional and modern cuts.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Locally Trusted</h3>
+                    <p>Proudly serving Sandy, UT for over a decade. Your neighbors trust us, and you will too.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h3>5-Star Rated</h3>
+                    <p>Consistently top-rated barbershops on Google and Yelp. Quality cuts, every single time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Best haircut I've had in years. The barber took the time to understand exactly what I wanted and delivered perfectly. The whole experience was professional and relaxing. Highly recommend booking here!"</p>
+                    <div class="testimonial-author">— Michael R., Sandy UT</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I've been going to the same barber for 3 years now and never been disappointed. Always consistent, always friendly, and the online booking system makes it so easy to schedule. Worth every penny."</p>
+                    <div class="testimonial-author">— David T., Sandy UT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Serving Sandy, UT and surrounding areas</strong></p>
+                    <p>Email: <a href="mailto:info@getsquire.com">info@getsquire.com</a></p>
+                </div>
+                
+                <form class="contact-form" action="mailto:info@getsquire.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Preferred Service & Time</label>
+                        <textarea id="message" name="message" placeholder="Tell us what service you're interested in and your preferred appointment time..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-title">Discover and Book Barbershops</div>
+            <p>Proudly serving Sandy, UT</p>
+            <p>&copy; 2026 Squire Barbershop Services. All rights reserved.</p>
+            <p class="mockup-credit">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
