@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy Tree Service Utah | Expert Tree Care | (801) 473-7548</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F9FF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1565C0;
+            padding: 18px 48px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #f8f8f8;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1565C0;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: #F5F9FF;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #42A5F5;
+            box-shadow: 0 8px 25px rgba(21, 101, 192, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1565C0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 20px;
+            background: #F5F9FF;
+        }
+        
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .trust-card {
+            background: white;
+            padding: 50px 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .trust-card h3 {
+            font-size: 1.6rem;
+            color: #1565C0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .trust-card p {
+            color: #666;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: #F5F9FF;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #42A5F5;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1565C0;
+            font-size: 1.05rem;
+            font-style: normal;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+            color: white;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+            margin: 15px 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.85;
+        }
+        
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            opacity: 0.95;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #1565C0;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #42A5F5;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: #1565C0;
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background: #0d47a1;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0d47a1;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 60px 20px;
+                min-height: 500px;
+            }
+            
+            .services, .why-choose, .testimonials, .contact {
+                padding: 60px 20px;
+            }
+            
+            .contact-info a {
+                font-size: 1.4rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sandy Tree Service Utah</h1>
+            <p>Professional Tree Care for Salt Lake County's Finest Properties</p>
+            <a href="tel:8014737548" class="cta-button">Call Now: (801) 473-7548</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Tree Care Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Tree Removal</h3>
+                    <p>Safe and efficient removal of hazardous, diseased, or unwanted trees. We handle trees of all sizes with precision and care for your property.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tree Trimming & Pruning</h3>
+                    <p>Expert trimming to improve tree health, appearance, and safety. Our certified arborists ensure your trees thrive for years to come.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Stump Grinding</h3>
+                    <p>Complete stump removal services that restore your landscape. We grind stumps below ground level for a clean, usable yard.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emergency Tree Services</h3>
+                    <p>24/7 emergency response for storm damage and fallen trees. Fast, reliable service when you need it most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Sandy Tree Service?</h2>
+            <div class="trust-signals">
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <h3>Fully Licensed & Insured</h3>
+                    <p>Complete liability and workers' compensation coverage for your peace of mind. All work meets Utah state regulations.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <h3>15+ Years Experience</h3>
+                    <p>Over a decade serving Sandy and Salt Lake County. Our certified arborists bring expertise to every job.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🏡</div>
+                    <h3>Local & Trusted</h3>
+                    <p>Family-owned business with deep roots in Sandy, Utah. We treat your property like our own.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Clean Cut Trees removed three large cottonwoods from our backyard. They were professional, efficient, and left our yard cleaner than they found it. Highly recommend for anyone in Sandy!"</p>
+                    <div class="testimonial-author">— Jennifer Martinez, Sandy UT</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"After a storm damaged our elm tree, they responded within hours. Fair pricing, excellent work, and genuinely nice people. We'll definitely use them again for our tree trimming needs."</p>
+                    <div class="testimonial-author">— Robert Chen, Draper UT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Get Your Free Estimate</h2>
+                <div class="contact-info">
+                    <a href="tel:8014737548">(801) 473-7548</a>
+                    <p>info@cleancutstrees.com</p>
+                    <p>Serving Sandy, UT and surrounding areas</p>
+                </div>
+                <form class="contact-form" action="mailto:info@cleancutstrees.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your tree service needs</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Request Free Estimate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Sandy Tree Service Utah</strong></p>
+        <p>Serving Sandy, UT and Salt Lake County</p>
+        <p>&copy; 2026 Clean Cut Trees. All rights reserved.</p>
+        <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+    </footer>
+</body>
+</html>
