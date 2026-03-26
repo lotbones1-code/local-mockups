@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted Draper Chiropractor | Sandy UT | (385) 237-3110</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #E8F5E9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: white;
+            padding: 100px 20px 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"/></svg>');
+            opacity: 0.5;
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #66BB6A;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 187, 106, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #4CAF50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 187, 106, 0.4);
+        }
+        
+        section {
+            padding: 80px 20px;
+            background-color: white;
+        }
+        
+        section:nth-child(even) {
+            background-color: #E8F5E9;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #2E7D32;
+            font-weight: 700;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #66BB6A;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .trust-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #66BB6A, #2E7D32);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .trust-item h3 {
+            font-size: 1.3rem;
+            color: #2E7D32;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .trust-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .testimonials {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #66BB6A;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #2E7D32;
+            font-size: 1.1rem;
+        }
+        
+        .contact-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-info a {
+            display: inline-block;
+            color: #2E7D32;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #66BB6A;
+        }
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .contact-form {
+            background: #E8F5E9;
+            padding: 40px;
+            border-radius: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2E7D32;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #c8e6c9;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #66BB6A;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, #2E7D32, #1B5E20);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+        }
+        
+        footer {
+            background-color: #1B5E20;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        footer p {
+            margin: 8px 0;
+            opacity: 0.9;
+        }
+        
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .contact-info a {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Trusted Draper Chiropractor</h1>
+            <p class="tagline">Expert Chiropractic Care for Draper, Sandy & Bluffdale Families</p>
+            <a href="tel:3852373110" class="cta-button">Call Now: (385) 237-3110</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Spinal Adjustments</h3>
+                    <p>Gentle, precise spinal manipulation to restore proper alignment, reduce pain, and improve nervous system function for lasting relief.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sports Injury Treatment</h3>
+                    <p>Specialized care for athletes and active individuals. We treat sprains, strains, and sports-related injuries to get you back in the game faster.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Auto Accident Recovery</h3>
+                    <p>Comprehensive treatment for whiplash, back pain, and other auto accident injuries. We work with insurance to ensure you get the care you need.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Wellness & Prevention</h3>
+                    <p>Ongoing chiropractic care to maintain optimal health, prevent future injuries, and enhance your overall quality of life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="trust-signals">
+                <div class="trust-item">
+                    <div class="trust-icon">✓</div>
+                    <h3>Licensed & Certified</h3>
+                    <p>Board-certified chiropractor with over 15 years of experience serving the Sandy and Draper communities.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">★</div>
+                    <h3>Locally Trusted</h3>
+                    <p>Proudly serving families in Sandy, Draper, and Bluffdale. We're your neighbors, committed to your health.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">♥</div>
+                    <h3>Patient-Centered Care</h3>
+                    <p>Personalized treatment plans tailored to your unique needs. We listen, we care, and we deliver results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"After years of chronic back pain, I finally found relief here. The doctor took the time to understand my condition and created a treatment plan that actually worked. I'm pain-free for the first time in 5 years!"</p>
+                    <p class="testimonial-author">— Sarah Mitchell, Sandy UT</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"I was in a car accident and could barely move my neck. Within a few weeks of treatment, I was back to normal. Professional, caring, and effective. I highly recommend this practice to anyone in the Draper area."</p>
+                    <p class="testimonial-author">— James Patel, Draper UT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <a href="tel:3852373110">(385) 237-3110</a>
+                    <p>Email: <a href="mailto:info@draperchirosource.com" style="font-size: 1.1rem;">info@draperchirosource.com</a></p>
+                    <p>Serving Sandy, Draper, Bluffdale & Surrounding Areas</p>
+                </div>
+                
+                <form class="contact-form" action="mailto:info@draperchirosource.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How Can We Help You?</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Trusted Draper Chiropractor</h3>
+            <p>Serving Sandy, Draper, Bluffdale & Surrounding Utah Communities</p>
+            <p>&copy; 2026 Trusted Draper Chiropractor. All Rights Reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
+        </div>
+    </footer>
+</body>
+</html>
