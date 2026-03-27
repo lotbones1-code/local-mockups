@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT Automotive | Expert Auto Repair in South Jordan UT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background: #F5F9FF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1565C0 0%, #1976D2 50%, #42A5F5 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(66, 165, 245, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1565C0;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f8f9fa;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1565C0;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #6B7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Services Section */
+        .services {
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: #F5F9FF;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #42A5F5;
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565C0;
+            font-weight: 700;
+        }
+        
+        .service-card p {
+            color: #6B7280;
+            line-height: 1.7;
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose {
+            background: linear-gradient(135deg, #F5F9FF 0%, #E3F2FD 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #1565C0;
+            font-weight: 700;
+        }
+        
+        .feature p {
+            color: #4B5563;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: #F5F9FF;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #42A5F5;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial:hover {
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #4B5563;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #1565C0;
+            font-size: 1.1rem;
+        }
+        
+        .stars {
+            color: #FFC107;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1565C0 0%, #1976D2 50%, #42A5F5 100%);
+            color: white;
+        }
+        
+        .contact .section-title,
+        .contact .section-subtitle {
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item-icon {
+            font-size: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-form h3 {
+            color: #1565C0;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #42A5F5;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            width: 100%;
+            background: #1565C0;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background: #0D47A1;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1E293B;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-grid,
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .hero {
+                padding: 80px 20px 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>GT Automotive</h1>
+            <p>Japanese Vehicle Specialists | 40+ Years of Expert Auto Repair in South Jordan</p>
+            <a href="tel:8013020912" class="cta-button">Call Now: (801) 302-0912</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Expert care for your Subaru, Lexus, and all Japanese vehicles</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Engine Diagnostics & Repair</h3>
+                    <p>Advanced diagnostics and expert repairs for all Japanese engine systems. We get to the root of the problem fast.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛞</div>
+                    <h3>Brake Service & Repair</h3>
+                    <p>Complete brake inspections, pad replacement, rotor resurfacing, and hydraulic system repairs to keep you safe.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Transmission Service</h3>
+                    <p>Fluid changes, diagnostics, and complete transmission repairs for manual and automatic systems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Preventive Maintenance</h3>
+                    <p>Oil changes, tune-ups, fluid checks, and scheduled maintenance to keep your vehicle running smoothly for years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose GT Automotive?</h2>
+            <p class="section-subtitle">South Jordan's trusted experts for Japanese vehicle care</p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏆</div>
+                    <h3>40+ Years Experience</h3>
+                    <p>Four decades of hands-on expertise in Japanese vehicle repair and maintenance.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Japanese Vehicle Specialists</h3>
+                    <p>We specialize in Subaru, Lexus, Toyota, Honda, Nissan, and all Japanese makes. We know these cars inside and out.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Licensed & Locally Owned</h3>
+                    <p>Fully licensed, insured, and proud to serve the South Jordan community with honest, reliable service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real reviews from South Jordan drivers</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"GT Automotive saved me thousands on my Subaru Outback. The transmission was acting up and they diagnosed it quickly and got me back on the road at a fair price. Honest mechanics are hard to find—these guys are the real deal."</p>
+                    <div class="testimonial-author">— Mike R., South Jordan</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I've been taking my Lexus here for three years now. They really know Japanese cars and always explain what needs to be done without pressure. Fast, professional, and my car runs like new every time."</p>
+                    <div class="testimonial-author">— Jennifer T., Riverton</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Call us today or send a message to schedule your appointment</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div>
+                            <div>Call us today:</div>
+                            <a href="tel:8013020912">(801) 302-0912</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉️</div>
+                        <div>
+                            <div>Email us:</div>
+                            <a href="mailto:gtappointments@gmail.com">gtappointments@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div>
+                            <div>Proudly serving:</div>
+                            <div>South Jordan, UT 84095</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="mailto:gtappointments@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell us about your vehicle and what you need" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>GT Automotive</h3>
+            <p>Expert Auto Repair for Japanese Vehicles</p>
+            <p>Serving South Jordan, UT 84095 and surrounding areas</p>
+            <p style="margin-top: 20px;">&copy; 2026 GT Automotive. All rights reserved.</p>
+            <div class="footer-note">
+                Website mockup by Shamil K — reply to claim this site
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
