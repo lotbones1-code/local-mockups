@@ -13,34 +13,34 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #FAFAFA;
+            background-color: #fff;
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+        
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #00695C 0%, #004D40 100%);
             color: white;
-            padding: 100px 20px 120px;
+            padding: 120px 20px 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -48,505 +48,504 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 1;
         }
-
+        
         .hero h1 {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
+        
+        .hero .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
             opacity: 0.95;
             font-weight: 400;
         }
-
+        
         .cta-button {
             display: inline-block;
-            background: #4DB6AC;
+            background-color: #4DB6AC;
             color: white;
             padding: 18px 45px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(77, 182, 172, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
+        
         .cta-button:hover {
-            background: #26A69A;
+            background-color: #26A69A;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(77, 182, 172, 0.4);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-
+        
         /* Services Section */
         .services {
             padding: 80px 20px;
-            background: white;
+            background-color: #E0F2F1;
         }
-
+        
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            color: #00695C;
-            margin-bottom: 15px;
             font-weight: 700;
+            color: #00695C;
+            margin-bottom: 60px;
         }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 50px;
-        }
-
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-
+        
         .service-card {
-            background: #E0F2F1;
-            padding: 35px 30px;
+            background: white;
+            padding: 40px 30px;
             border-radius: 12px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
-
+        
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 105, 92, 0.15);
-            border-color: #4DB6AC;
+            box-shadow: 0 8px 25px rgba(0,105,92,0.15);
         }
-
+        
         .service-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
-
+        
         .service-card h3 {
+            font-size: 1.5rem;
             color: #00695C;
-            font-size: 1.4rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-
+        
         .service-card p {
             color: #555;
             line-height: 1.7;
         }
-
+        
         /* Why Choose Us Section */
         .why-choose {
             padding: 80px 20px;
-            background: #E0F2F1;
+            background: white;
         }
-
-        .features-grid {
+        
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            margin-top: 40px;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-
-        .feature-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
+        
+        .benefit-item {
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+            padding: 20px;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 105, 92, 0.15);
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4DB6AC, #00695C);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.2rem;
         }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            color: #00695C;
+        
+        .benefit-item h3 {
             font-size: 1.4rem;
-            margin-bottom: 15px;
+            color: #00695C;
+            margin-bottom: 12px;
             font-weight: 600;
         }
-
-        .feature-card p {
+        
+        .benefit-item p {
             color: #666;
-            line-height: 1.7;
+            font-size: 1.05rem;
         }
-
+        
         /* Testimonials Section */
         .testimonials {
             padding: 80px 20px;
-            background: white;
+            background-color: #E0F2F1;
         }
-
+        
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-
+        
         .testimonial-card {
-            background: #E0F2F1;
+            background: white;
             padding: 35px;
             border-radius: 12px;
-            border-left: 4px solid #4DB6AC;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: relative;
         }
-
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: #4DB6AC;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+        
         .testimonial-text {
             font-size: 1.05rem;
             color: #444;
             margin-bottom: 20px;
-            font-style: italic;
             line-height: 1.7;
+            position: relative;
+            z-index: 1;
         }
-
+        
         .testimonial-author {
             font-weight: 600;
             color: #00695C;
             font-size: 1.1rem;
         }
-
+        
         .testimonial-location {
             color: #777;
             font-size: 0.95rem;
         }
-
+        
         /* Contact Section */
         .contact {
             padding: 80px 20px;
-            background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);
+            background: white;
         }
-
+        
         .contact-content {
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            color: #00695C;
             margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            font-weight: 700;
         }
-
-        .contact-item {
+        
+        .contact-details {
             display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
+        
+        .contact-item {
+            font-size: 1.2rem;
+            color: #555;
         }
-
-        .contact-item span {
-            margin-right: 15px;
-            font-size: 1.5rem;
-        }
-
+        
         .contact-item a {
             color: #00695C;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
-
+        
         .contact-item a:hover {
             color: #4DB6AC;
         }
-
+        
         .contact-form {
-            background: white;
+            background: #E0F2F1;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 40px;
         }
-
+        
         .form-group {
             margin-bottom: 25px;
         }
-
+        
         .form-group label {
             display: block;
             margin-bottom: 8px;
             color: #00695C;
             font-weight: 600;
+            font-size: 1rem;
         }
-
+        
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 14px;
-            border: 2px solid #E0F2F1;
+            border: 2px solid #B2DFDB;
             border-radius: 8px;
             font-size: 1rem;
             font-family: 'Inter', sans-serif;
             transition: border-color 0.3s ease;
         }
-
+        
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #4DB6AC;
         }
-
+        
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
-
+        
         .submit-button {
-            background: #00695C;
+            background: linear-gradient(135deg, #00695C, #004D40);
             color: white;
             padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
+        
         .submit-button:hover {
-            background: #004D40;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 105, 92, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-
+        
         /* Footer */
-        footer {
-            background: #00695C;
+        .footer {
+            background-color: #00695C;
             color: white;
             padding: 40px 20px 20px;
             text-align: center;
         }
-
-        .footer-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
-
-        .footer-content p {
-            margin-bottom: 8px;
+        
+        .footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
             opacity: 0.9;
         }
-
+        
         .footer-note {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.9rem;
-            opacity: 0.8;
+            opacity: 0.7;
         }
-
+        
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
             }
-
-            .hero p {
+            
+            .hero .tagline {
                 font-size: 1.1rem;
             }
-
+            
             .section-title {
                 font-size: 2rem;
             }
-
+            
             .services-grid,
-            .features-grid,
+            .benefits-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-
-            .contact-info,
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
             .contact-form {
-                padding: 30px 25px;
+                padding: 25px;
             }
         }
-
+        
         @media (max-width: 480px) {
             .hero {
-                padding: 60px 20px 80px;
+                padding: 80px 15px 60px;
             }
-
+            
             .hero h1 {
                 font-size: 1.8rem;
             }
-
+            
             .cta-button {
                 padding: 15px 35px;
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
-
-            .service-card,
-            .feature-card {
-                padding: 25px 20px;
+            
+            .section-title {
+                font-size: 1.7rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Utah HVAC</h1>
-            <p>Expert Heating & Cooling Services in Sandy, UT</p>
-            <a href="#contact" class="cta-button">Book Today</a>
+            <p class="tagline">Sandy's Trusted Heating & Cooling Experts - Fast, Reliable, Affordable</p>
+            <a href="#contact" class="cta-button">Book Your Service Today</a>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Keeping Sandy homes comfortable year-round</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">❄️</div>
-                    <h3>Air Conditioning Repair & Installation</h3>
-                    <p>Expert AC diagnostics, repairs, and new system installations. We handle all major brands and ensure your home stays cool during Utah's hot summers.</p>
+                    <h3>AC Repair & Installation</h3>
+                    <p>Expert air conditioning repair, maintenance, and new system installations. Stay cool all summer long with our reliable AC services.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔥</div>
-                    <h3>Furnace & Heating Services</h3>
-                    <p>Complete furnace maintenance, repair, and replacement. Keep your family warm through Sandy's cold winters with our reliable heating solutions.</p>
+                    <h3>Heating System Service</h3>
+                    <p>Furnace repair, heat pump service, and heating installations. Keep your family warm during Utah's cold winters.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>24/7 Emergency HVAC Repair</h3>
-                    <p>System down at 2 AM? We're here for you. Our emergency technicians respond quickly to get your heating or cooling back online fast.</p>
+                    <h3>HVAC Maintenance</h3>
+                    <p>Preventive maintenance plans to keep your system running efficiently year-round. Save money on energy bills and avoid costly breakdowns.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">✅</div>
-                    <h3>Preventive Maintenance Plans</h3>
-                    <p>Extend your system's lifespan and prevent costly breakdowns with our seasonal tune-ups and maintenance agreements tailored for Sandy's climate.</p>
+                    <div class="service-icon">🌬️</div>
+                    <h3>Indoor Air Quality</h3>
+                    <p>Air duct cleaning, filter replacements, and air purification systems to ensure your family breathes clean, healthy air.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
     <section class="why-choose">
         <div class="container">
             <h2 class="section-title">Why Choose Utah HVAC?</h2>
-            <p class="section-subtitle">Your trusted local HVAC experts</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
                     <h3>Licensed & Insured</h3>
-                    <p>Fully licensed Utah contractors with comprehensive insurance coverage. Your home and investment are protected with every service call.</p>
+                    <p>Fully licensed HVAC technicians with comprehensive insurance coverage for your peace of mind.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Local Sandy Experts</h3>
-                    <p>Based right here in Sandy, UT. We understand Utah's unique climate challenges and provide fast, reliable service to our neighbors.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⭐</div>
                     <h3>15+ Years Experience</h3>
-                    <p>Our expert technicians bring over 15 years of combined HVAC experience, delivering quality workmanship on every job, big or small.</p>
+                    <p>Serving Sandy and surrounding communities since 2008. Trusted by thousands of local homeowners.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>Local Family-Owned</h3>
+                    <p>Proud Sandy residents who care about our community. We treat your home like our own.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">What Our Customers Say</h2>
-            <p class="section-subtitle">Real reviews from real Sandy residents</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Our AC went out during the hottest week of summer. Utah HVAC came out the same day and had us back up and running in just a few hours. Professional, fair pricing, and incredibly responsive. Highly recommend!"</p>
-                    <p class="testimonial-author">Jennifer M.</p>
+                    <p class="testimonial-text">Utah HVAC came out same day when our AC stopped working in July. The technician was professional, explained everything clearly, and had us up and running in under two hours. Highly recommend!</p>
+                    <p class="testimonial-author">Sarah Johnson</p>
                     <p class="testimonial-location">Sandy, UT</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"We needed a complete furnace replacement before winter hit. The team at Utah HVAC walked us through all our options, never pressured us, and installed our new system perfectly. Our house has never been more comfortable!"</p>
-                    <p class="testimonial-author">David R.</p>
-                    <p class="testimonial-location">Sandy, UT</p>
+                    <p class="testimonial-text">We've used Utah HVAC for our annual maintenance for three years now. They're always on time, thorough, and honest about what needs to be done. Fair pricing and excellent service every time.</p>
+                    <p class="testimonial-author">Mike Peterson</p>
+                    <p class="testimonial-location">Draper, UT</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Schedule your service today</p>
-            <div class="contact-content">
-                <div class="contact-info">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <div class="contact-details">
                     <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:info@bestlocalbizlistings.com">info@bestlocalbizlistings.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>Serving Sandy, UT and surrounding areas</span>
+                        📧 <a href="mailto:info@bestlocalbizlistings.com">info@bestlocalbizlistings.com</a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form action="mailto:info@bestlocalbizlistings.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">How Can We Help?</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
+                <p style="color: #666; margin-top: 20px; font-size: 1.1rem;">Proudly serving Sandy, UT and surrounding areas</p>
             </div>
+            
+            <form class="contact-form" action="mailto:info@bestlocalbizlistings.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">How Can We Help?</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Utah HVAC</h3>
-                <p>Serving Sandy, UT</p>
-                <p>&copy; 2026 Utah HVAC. All rights reserved.</p>
-                <div class="footer-note">
-                    Website mockup by Shamil K — reply to claim this site
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Utah HVAC</h3>
+            <p>Serving Sandy, UT with Expert HVAC Services</p>
+            <p>&copy; 2026 Utah HVAC. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
         </div>
     </footer>
 </body>
