@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandy Fence Company - Expert Fence Installation & Repair in Sandy, UT</title>
+    <title>Sandy Fence Company - Utah's Oldest Fence Company | Expert Fence Installation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,7 +19,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
             background: #F5F9FF;
@@ -31,9 +31,8 @@
             padding: 0 20px;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);
+        header {
+            background: linear-gradient(135deg, #1565C0 0%, #1976D2 100%);
             color: white;
             padding: 100px 20px 120px;
             text-align: center;
@@ -41,73 +40,72 @@
             overflow: hidden;
         }
 
-        .hero::before {
+        header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
+            background: linear-gradient(135deg, rgba(66, 165, 245, 0.1) 0%, rgba(21, 101, 192, 0.2) 100%);
             z-index: 1;
         }
 
-        .hero h1 {
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
             font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
-        .hero .tagline {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
             opacity: 0.95;
             font-weight: 400;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #1565C0;
+            background: #42A5F5;
+            color: white;
             padding: 18px 45px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            background: #1E88E5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5);
         }
 
-        /* Sections */
         section {
             padding: 80px 20px;
         }
 
-        section h2 {
-            text-align: center;
+        h2 {
             font-size: 2.5rem;
-            color: #1565C0;
-            margin-bottom: 50px;
             font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1565C0;
         }
 
-        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         .service-card {
@@ -116,7 +114,6 @@
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            text-align: center;
         }
 
         .service-card:hover {
@@ -124,16 +121,10 @@
             box-shadow: 0 8px 25px rgba(21, 101, 192, 0.15);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
         .service-card h3 {
-            color: #1565C0;
             font-size: 1.5rem;
             margin-bottom: 15px;
-            font-weight: 600;
+            color: #1565C0;
         }
 
         .service-card p {
@@ -141,86 +132,64 @@
             line-height: 1.7;
         }
 
-        /* Why Choose Us */
-        .why-choose-us {
-            background: white;
-        }
-
         .trust-signals {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            margin-top: 40px;
+            text-align: center;
         }
 
         .trust-item {
-            text-align: center;
-            padding: 30px;
+            padding: 30px 20px;
         }
 
-        .trust-badge {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2.5rem;
-            color: white;
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         .trust-item h3 {
-            color: #1565C0;
             font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1565C0;
         }
 
         .trust-item p {
             color: #666;
-            line-height: 1.7;
+            font-size: 1rem;
         }
 
-        /* Testimonials */
-        .testimonials-grid {
+        .testimonials {
+            background: white;
+        }
+
+        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .testimonial {
-            background: white;
-            padding: 40px;
+            background: #F5F9FF;
+            padding: 35px;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             border-left: 4px solid #42A5F5;
         }
 
         .testimonial-text {
-            font-size: 1.1rem;
+            font-style: italic;
             color: #555;
             margin-bottom: 20px;
             line-height: 1.8;
-            font-style: italic;
+            font-size: 1.05rem;
         }
 
         .testimonial-author {
-            font-weight: 600;
+            font-weight: 700;
             color: #1565C0;
-            font-size: 1rem;
         }
 
-        .stars {
-            color: #FFC107;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* Contact */
-        .contact {
+        .contact-section {
             background: white;
         }
 
@@ -235,12 +204,12 @@
         }
 
         .contact-info a {
-            display: block;
-            font-size: 2rem;
             color: #1565C0;
             text-decoration: none;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            display: block;
+            margin: 15px 0;
             transition: color 0.3s ease;
         }
 
@@ -250,19 +219,20 @@
 
         .contact-info .email {
             font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 10px;
+            font-weight: 400;
         }
 
         .contact-info .location {
             font-size: 1.1rem;
-            color: #888;
+            color: #666;
+            margin-top: 10px;
         }
 
         .contact-form {
             background: #F5F9FF;
             padding: 40px;
             border-radius: 12px;
+            margin-top: 40px;
         }
 
         .form-group {
@@ -272,18 +242,18 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
+            font-weight: 600;
             color: #333;
-            font-weight: 500;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
+            padding: 14px;
+            border: 2px solid #E0E0E0;
             border-radius: 8px;
-            font-size: 1rem;
             font-family: 'Inter', sans-serif;
+            font-size: 1rem;
             transition: border-color 0.3s ease;
         }
 
@@ -299,75 +269,68 @@
         }
 
         .submit-button {
-            width: 100%;
-            background: linear-gradient(135deg, #1565C0, #42A5F5);
+            background: #1565C0;
             color: white;
-            padding: 18px;
+            padding: 16px 40px;
             border: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: 600;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
+            width: 100%;
         }
 
         .submit-button:hover {
+            background: #42A5F5;
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
         }
 
-        /* Footer */
         footer {
             background: #1565C0;
             color: white;
-            padding: 40px 20px 20px;
             text-align: center;
+            padding: 40px 20px;
         }
 
-        footer .business-name {
+        footer h3 {
             font-size: 1.5rem;
-            font-weight: 700;
             margin-bottom: 10px;
         }
 
-        footer .location {
-            font-size: 1rem;
-            margin-bottom: 20px;
+        footer p {
             opacity: 0.9;
+            margin: 8px 0;
         }
 
-        footer .copyright {
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .footer-note {
+            margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
-        footer .mockup-note {
-            font-size: 0.85rem;
-            margin-top: 15px;
-            opacity: 0.7;
-            font-style: italic;
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            h1 {
                 font-size: 2.2rem;
             }
 
-            .hero .tagline {
+            .tagline {
                 font-size: 1.1rem;
             }
 
-            section h2 {
+            h2 {
                 font-size: 2rem;
             }
 
             .services-grid,
-            .trust-signals,
-            .testimonials-grid {
+            .testimonial-grid {
                 grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 20px;
             }
 
             .contact-form {
@@ -377,121 +340,120 @@
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-content">
+    <header>
+        <div class="container">
             <h1>Sandy Fence Company</h1>
-            <p class="tagline">Utah's Oldest & Most Trusted Fence Experts Since 1945</p>
+            <p class="tagline">Utah's Oldest Fence Company - Expert Residential & Commercial Fencing Since 1922</p>
             <a href="tel:8884383362" class="cta-button">Call Now: (888) 438-3362</a>
         </div>
-    </section>
+    </header>
 
-    <section class="services">
+    <section id="services">
         <div class="container">
-            <h2>Our Fencing Services</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔗</div>
                     <h3>Chain Link Fencing</h3>
-                    <p>Durable, affordable chain link fences perfect for residential yards, commercial properties, and athletic fields. Custom heights and galvanized options available.</p>
+                    <p>Durable and cost-effective chain link fences for residential and commercial properties. Perfect for security, pet containment, and property boundaries.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏛️</div>
                     <h3>Wrought Iron & Ornamental</h3>
-                    <p>Elegant wrought iron and ornamental fencing that combines security with curb appeal. Custom designs to match your home's architecture.</p>
+                    <p>Beautiful custom wrought iron and ornamental fencing that adds elegance and security to your property. Expert design and installation.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🪵</div>
-                    <h3>Wood & Vinyl Fencing</h3>
-                    <p>Beautiful privacy fences in cedar, pine, or low-maintenance vinyl. Perfect for backyards, gardens, and property lines.</p>
+                    <h3>Residential Fencing</h3>
+                    <p>Privacy fences, picket fences, and custom residential solutions tailored to your home's style and your family's needs.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏢</div>
                     <h3>Commercial Fencing</h3>
-                    <p>Heavy-duty commercial fencing solutions including security gates, access control, and perimeter fencing for businesses and industrial sites.</p>
+                    <p>Professional-grade fencing for businesses, warehouses, and industrial properties. Security-focused designs with expert installation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="why-choose-us">
+    <section id="why-choose-us">
         <div class="container">
-            <h2>Why Choose Sandy Fence Company?</h2>
+            <h2>Why Choose Sandy Fence Company</h2>
             <div class="trust-signals">
                 <div class="trust-item">
-                    <div class="trust-badge">⭐</div>
-                    <h3>80+ Years of Experience</h3>
-                    <p>As Utah's oldest fence company, we've been serving Sandy and the Wasatch Front since 1945. Our expertise is unmatched.</p>
+                    <div class="trust-icon">🏆</div>
+                    <h3>Over 100 Years Experience</h3>
+                    <p>Utah's oldest fence company with a century of expertise in fence design and installation.</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-badge">✓</div>
+                    <div class="trust-icon">✓</div>
                     <h3>Licensed & Insured</h3>
-                    <p>Fully licensed, bonded, and insured for your peace of mind. We stand behind every installation with industry-leading warranties.</p>
+                    <p>Fully licensed and insured for your peace of mind. Professional service you can trust.</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-badge">📍</div>
+                    <div class="trust-icon">📍</div>
                     <h3>Local Sandy Experts</h3>
-                    <p>Based right here in Sandy, UT. We know local regulations, weather conditions, and what works best for Utah homes and businesses.</p>
+                    <p>Proudly serving Sandy and surrounding Utah communities. We know the area and the regulations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <h2>What Our Customers Say</h2>
-            <div class="testimonials-grid">
+            <div class="testimonial-grid">
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Sandy Fence Company installed a beautiful wrought iron fence around our property. The crew was professional, on time, and the quality is outstanding. After 3 years it still looks brand new. Highly recommend!"</p>
+                    <p class="testimonial-text">"Sandy Fence Company did an amazing job on our backyard fence. Professional crew, fair pricing, and the fence looks beautiful. They showed up on time and finished when they said they would. Highly recommend!"</p>
                     <p class="testimonial-author">— Jennifer Martinez, Sandy UT</p>
                 </div>
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"We needed commercial fencing for our warehouse in Sandy and they delivered exactly what we needed on budget and ahead of schedule. Their experience really shows. Will definitely use them again for our other locations."</p>
-                    <p class="testimonial-author">— Michael Thompson, Business Owner</p>
+                    <p class="testimonial-text">"We needed commercial fencing for our warehouse and Sandy Fence came through perfectly. Over 100 years in business shows - they know exactly what they're doing. Great communication throughout the entire project."</p>
+                    <p class="testimonial-author">— David Thompson, Draper UT</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2>Get Your Free Quote Today</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <a href="tel:8884383362">(888) 438-3362</a>
-                    <p class="email">info@westernfenceco.com</p>
-                    <p class="location">Serving Sandy, UT and surrounding areas</p>
+                    <a href="mailto:info@westernfenceco.com" class="email">info@westernfenceco.com</a>
+                    <p class="location">Proudly Serving Sandy, UT and Surrounding Areas</p>
                 </div>
-                <form class="contact-form" action="mailto:info@westernfenceco.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell us about your project</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Request Free Quote</button>
-                </form>
+                
+                <div class="contact-form">
+                    <form action="mailto:info@westernfenceco.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Project</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Request Free Quote</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p class="business-name">Sandy Fence Company</p>
-            <p class="location">Proudly serving Sandy, UT and the Wasatch Front</p>
-            <p class="copyright">&copy; 2026 Sandy Fence Company. All rights reserved.</p>
-            <p class="mockup-note">Website mockup by Shamil K — reply to claim this site</p>
+            <h3>Sandy Fence Company</h3>
+            <p>Utah's Oldest Fence Company</p>
+            <p>Serving Sandy, UT and Surrounding Areas</p>
+            <p>(888) 438-3362 | info@westernfenceco.com</p>
+            <p>&copy; 2026 Sandy Fence Company. All rights reserved.</p>
+            <p class="footer-note">Website mockup by Shamil K — reply to claim this site</p>
         </div>
     </footer>
 </body>
