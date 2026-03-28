@@ -1912,14 +1912,15 @@ footer {
 <div class="toast-container" id="toastContainer"></div>
 
 <script>
-// ── Product Data ──
+// ── Product Data (updated with Cernum in-stock items 3/29/2026) ──
 const products = [
   {
-    id: 'bpc157',
+    id: 'bpc157-5',
     name: 'BPC-157',
     dosage: '5mg per vial',
-    price: 39.99,
+    price: 44.99,
     popular: true,
+    inStock: true,
     desc: 'Body Protection Compound-157 is a pentadecapeptide widely studied for its regenerative properties in connective tissue, muscle, and gastrointestinal research.',
     fullDesc: 'BPC-157 (Body Protection Compound-157) is a synthetic pentadecapeptide consisting of 15 amino acids. It is derived from a protective protein found in gastric juice. Extensively studied in laboratory settings for tissue regeneration, angiogenesis modulation, and growth factor expression in connective tissue, tendon, and muscle fiber models.',
     specs: {
@@ -1932,15 +1933,32 @@ const products = [
     }
   },
   {
-    id: 'tb500',
+    id: 'bpc157-10',
+    name: 'BPC-157',
+    dosage: '10mg per vial',
+    price: 54.99,
+    popular: true,
+    inStock: true,
+    desc: 'Higher dose BPC-157 for extended research protocols requiring greater peptide concentration per vial.',
+    fullDesc: 'BPC-157 (Body Protection Compound-157) is a synthetic pentadecapeptide consisting of 15 amino acids. The 10mg variant provides higher concentration for research protocols requiring extended dosing studies.',
+    specs: {
+      'Molecular Formula': 'C62H98N16O22',
+      'Molecular Weight': '1419.53 g/mol',
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '-20\u00B0C, desiccated'
+    }
+  },
+  {
+    id: 'tb500-5',
     name: 'TB-500',
     dosage: '5mg per vial',
-    price: 34.99,
-    popular: false,
-    desc: 'Thymosin Beta-4 fragment studied for its role in cell migration, wound healing pathways, and anti-inflammatory response mechanisms in research models.',
-    fullDesc: 'TB-500 is a synthetic fraction of Thymosin Beta-4, a naturally occurring 43-amino acid peptide present in virtually all human and animal cells. Research focuses on its role in upregulating cell-building proteins such as actin, promoting cell migration and differentiation, and modulating inflammatory pathways in tissue repair models.',
+    price: 49.99,
+    popular: true,
+    inStock: true,
+    desc: 'Thymosin Beta-4 fragment studied for its role in cell migration, wound healing pathways, and anti-inflammatory response mechanisms.',
+    fullDesc: 'TB-500 is a synthetic fraction of Thymosin Beta-4, a naturally occurring 43-amino acid peptide. Research focuses on its role in upregulating cell-building proteins such as actin, promoting cell migration and differentiation, and modulating inflammatory pathways.',
     specs: {
-      'Sequence': 'Ac-SDKP (active fragment)',
       'Molecular Formula': 'C212H350N56O78S',
       'Molecular Weight': '4963.44 g/mol',
       'Purity': '>99% (HPLC)',
@@ -1949,34 +1967,105 @@ const products = [
     }
   },
   {
-    id: 'semaglutide',
-    name: 'Semaglutide',
-    dosage: '5mg per vial',
-    price: 89.99,
-    popular: true,
-    desc: 'GLP-1 receptor agonist extensively studied for metabolic research, glucose homeostasis, appetite regulation pathways, and energy expenditure models.',
-    fullDesc: 'Semaglutide is a long-acting glucagon-like peptide-1 (GLP-1) receptor agonist. In research settings, it is studied for its interactions with metabolic pathways including insulin secretion, glucagon suppression, gastric motility, and central appetite regulation mechanisms. Its extended half-life makes it valuable for sustained-action studies.',
+    id: 'tb500-10',
+    name: 'TB-500',
+    dosage: '10mg per vial',
+    price: 69.99,
+    popular: false,
+    inStock: true,
+    desc: 'Higher concentration TB-500 for advanced research protocols requiring extended dosing.',
+    fullDesc: 'TB-500 10mg provides double the concentration per vial for research protocols requiring higher sustained levels of Thymosin Beta-4 fragment.',
     specs: {
-      'Molecular Formula': 'C187H291N45O59',
-      'Molecular Weight': '4113.58 g/mol',
       'Purity': '>99% (HPLC)',
       'Form': 'Lyophilized Powder',
-      'Storage': '2-8\u00B0C, protected from light',
-      'Half-life': '~7 days (in-vivo models)'
+      'Storage': '-20\u00B0C, desiccated'
     }
   },
   {
-    id: 'pt141',
-    name: 'PT-141',
+    id: 'retatrutide',
+    name: 'Retatrutide',
+    dosage: '5mg per vial',
+    price: 59.99,
+    popular: true,
+    inStock: true,
+    desc: 'Triple agonist (GLP-1/GIP/glucagon) studied for metabolic research, body composition, and energy expenditure models.',
+    fullDesc: 'Retatrutide is a novel triple incretin receptor agonist targeting GLP-1, GIP, and glucagon receptors simultaneously. Research focuses on its unique multi-pathway activation for metabolic studies, body composition analysis, and energy expenditure modulation in laboratory models.',
+    specs: {
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '2-8\u00B0C, protected from light'
+    }
+  },
+  {
+    id: 'tesamorelin-5',
+    name: 'Tesamorelin',
+    dosage: '5mg per vial',
+    price: 54.99,
+    popular: false,
+    inStock: true,
+    desc: 'Growth hormone-releasing hormone (GHRH) analog studied for GH secretion pathways and lipodystrophy research.',
+    fullDesc: 'Tesamorelin is a synthetic GHRH analog that stimulates the pituitary gland to produce growth hormone. Studied in research for its selective GH secretion mechanisms and effects on visceral adipose tissue in laboratory models.',
+    specs: {
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '-20\u00B0C, desiccated'
+    }
+  },
+  {
+    id: 'tesamorelin-10',
+    name: 'Tesamorelin',
+    dosage: '10mg per vial',
+    price: 79.99,
+    popular: false,
+    inStock: true,
+    desc: 'Higher concentration GHRH analog for extended research protocols.',
+    fullDesc: 'Tesamorelin 10mg provides higher concentration for sustained-action research studies of growth hormone releasing pathways.',
+    specs: {
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '-20\u00B0C, desiccated'
+    }
+  },
+  {
+    id: 'motsc',
+    name: 'MOTS-c',
     dosage: '10mg per vial',
     price: 44.99,
     popular: false,
-    desc: 'Bremelanotide is a melanocortin receptor agonist studied for MC3R/MC4R pathway activation, neural signaling research, and behavioral response models.',
-    fullDesc: 'PT-141 (Bremelanotide) is a cyclic heptapeptide melanocortin receptor agonist. It acts on the MC3R and MC4R receptors in the central nervous system. Research applications include studying melanocortin signaling pathways, central nervous system receptor activation, and downstream physiological response cascades in laboratory models.',
+    inStock: true,
+    desc: 'Mitochondrial-derived peptide studied for metabolic homeostasis, AMPK activation, and exercise mimetic research.',
+    fullDesc: 'MOTS-c is a 16-amino acid mitochondrial-derived peptide encoded in the 12S rRNA gene. It activates AMPK pathways and is studied as an exercise mimetic in metabolic and cellular energy research models.',
     specs: {
-      'Sequence': 'Ac-Nle-cyclo[Asp-His-D-Phe-Arg-Trp-Lys]-OH',
-      'Molecular Formula': 'C50H68N14O10',
-      'Molecular Weight': '1025.18 g/mol',
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '-20\u00B0C, desiccated'
+    }
+  },
+  {
+    id: 'cjc1295',
+    name: 'CJC-1295 + Ipamorelin',
+    dosage: '5/5mg blend per vial',
+    price: 54.99,
+    popular: true,
+    inStock: true,
+    desc: 'Synergistic GHRH/GHRP blend studied for optimized growth hormone secretion research protocols.',
+    fullDesc: 'CJC-1295 No DAC paired with Ipamorelin in a 5mg/5mg blend. This combination is widely studied for synergistic growth hormone releasing effects, combining GHRH and GHRP receptor activation pathways.',
+    specs: {
+      'Purity': '>99% (HPLC)',
+      'Form': 'Lyophilized Powder',
+      'Storage': '-20\u00B0C, desiccated'
+    }
+  },
+  {
+    id: 'melanotan2',
+    name: 'Melanotan-2',
+    dosage: '10mg per vial',
+    price: 39.99,
+    popular: false,
+    inStock: true,
+    desc: 'Melanocortin receptor agonist studied for melanogenesis, photoprotection, and MC1R/MC4R signaling research.',
+    fullDesc: 'Melanotan-2 is a cyclic analog of alpha-melanocyte-stimulating hormone. It acts on melanocortin receptors MC1R through MC5R and is studied for melanogenesis pathways, UV photoprotection mechanisms, and receptor selectivity in laboratory models.',
+    specs: {
       'Purity': '>99% (HPLC)',
       'Form': 'Lyophilized Powder',
       'Storage': '-20\u00B0C, desiccated'
@@ -2544,12 +2633,12 @@ document.addEventListener('keydown', (e) => {
   // Knowledge base
   const KB = {
     products: [
-      { name: 'BPC-157', price: '$39.99', dosage: '5mg per vial', desc: 'Pentadecapeptide studied for regenerative properties in connective tissue, muscle, and GI research.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
-      { name: 'TB-500', price: '$34.99', dosage: '5mg per vial', desc: 'Thymosin Beta-4 fragment studied for cell migration, wound healing pathways, and anti-inflammatory response.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
-      { name: 'Semaglutide', price: '$89.99', dosage: '5mg per vial', desc: 'GLP-1 receptor agonist studied for metabolic research, glucose homeostasis, and appetite regulation.', purity: '>99%', form: 'Lyophilized Powder', storage: '2-8°C, protected from light' },
-      { name: 'PT-141', price: '$44.99', dosage: '10mg per vial', desc: 'Bremelanotide melanocortin receptor agonist studied for MC3R/MC4R pathway activation.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
-      { name: 'CJC-1295 DAC', price: '$49.99', dosage: '5mg per vial', desc: 'Modified GHRH analog with Drug Affinity Complex for extended half-life research.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
-      { name: 'MK-677', price: '$54.99', dosage: '25mg/mL — 30mL', desc: 'Ibutamoren, non-peptide ghrelin receptor agonist for GH secretagogue and IGF-1 research.', purity: '>99%', form: 'Liquid Solution', storage: 'Room temperature, away from light' }
+      { name: 'BPC-157 5mg', price: '$44.99', dosage: '5mg per vial', desc: 'Pentadecapeptide studied for regenerative properties in connective tissue, muscle, and GI research.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
+      { name: 'TB-500 5mg', price: '$49.99', dosage: '5mg per vial', desc: 'Thymosin Beta-4 fragment studied for cell migration, wound healing pathways, and anti-inflammatory response.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
+      { name: 'Retatrutide 5mg', price: '$59.99', dosage: '5mg per vial', desc: 'GLP-1 receptor agonist studied for metabolic research, glucose homeostasis, and appetite regulation.', purity: '>99%', form: 'Lyophilized Powder', storage: '2-8°C, protected from light' },
+      { name: 'MOTS-c 10mg', price: '$44.99', dosage: '10mg per vial', desc: 'Bremelanotide melanocortin receptor agonist studied for MC3R/MC4R pathway activation.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
+      { name: 'CJC-1295 + Ipamorelin', price: '$54.99', dosage: '5mg per vial', desc: 'Modified GHRH analog with Drug Affinity Complex for extended half-life research.', purity: '>99%', form: 'Lyophilized Powder', storage: '-20°C, desiccated' },
+      { name: 'Tesamorelin 5mg', price: '$54.99', dosage: '25mg/mL — 30mL', desc: 'Ibutamoren, non-peptide ghrelin receptor agonist for GH secretagogue and IGF-1 research.', purity: '>99%', form: 'Liquid Solution', storage: 'Room temperature, away from light' }
     ],
     faqs: [
       { q: ['shipping', 'ship', 'delivery', 'how long', 'fast', 'deliver', 'tracking', 'track'], a: 'Orders placed before 2:00 PM EST (Mon-Fri) ship same day. Standard delivery is 2-4 business days. Expedited options (overnight, 2-day) are available at checkout. All orders include tracking via email. Free shipping on orders over $150.' },
